@@ -11,7 +11,8 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "WZAsyncDrawingKit", dependencies: [], path: "Sources"),
+        .target(name: "WZAsyncDrawingKit", dependencies: ["WZAsyncCore"], path: "Sources/Exports"),
+        .target(name: "WZAsyncCore", dependencies: [], path: "Sources/Core"),
         .target(name: "WZAsyncDrawingKitTests", dependencies: ["WZAsyncDrawingKit"], path: "Tests"),
     ],
     swiftLanguageVersions: [
